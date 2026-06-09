@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feature Coming Soon</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(
+        135deg,
+        #e8f5e9,
+        #c8e6c9,
+        #a5d6a7
+    );
+}
+
+.error-card{
+    width:90%;
+    max-width:550px;
+    background:#ffffff;
+    border-radius:30px;
+    padding:50px 40px;
+    text-align:center;
+    box-shadow:0 20px 50px rgba(0,0,0,0.12);
+}
+
+.error-icon{
+    width:100px;
+    height:100px;
+    margin:0 auto 25px;
+    border-radius:50%;
+    background:#e8f5e9;
+    color:#2e7d32;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:45px;
+}
+
+.error-card h1{
+    font-size:80px;
+    color:#2e7d32;
+    margin-bottom:10px;
+}
+
+.error-card h2{
+    color:#333;
+    margin-bottom:15px;
+    font-size:28px;
+}
+
+.error-card p{
+    color:#666;
+    line-height:1.8;
+    margin-bottom:35px;
+    font-size:15px;
+}
+
+.back-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:14px 32px;
+    background:#2e7d32;
+    color:white;
+    text-decoration:none;
+    border-radius:12px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.back-btn:hover{
+    background:#256728;
+    transform:translateY(-3px);
+}
+
+@media(max-width:768px){
+
+    .error-card{
+        padding:40px 25px;
+    }
+
+    .error-card h1{
+        font-size:60px;
+    }
+
+    .error-card h2{
+        font-size:24px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="error-card">
+
+    <div class="error-icon">
+        <i class="fa-solid fa-lock"></i>
+    </div>
+
+    <h1>404</h1>
+
+    <h2>Forgot Password Coming Soon</h2>
+
+    <p>
+        Password recovery functionality is currently under development.
+        Our team is working to provide a secure and seamless experience
+        for all Stackly Agriculture users.
+    </p>
+
+    <a href="index.html" class="back-btn">
+        <i class="fa-solid fa-arrow-left"></i>
+        Back To Login
+    </a>
+
+</div>
+
+</body>
+</html>
