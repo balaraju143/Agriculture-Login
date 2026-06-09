@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agriculture Register</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+
+        <div class="logo">
+            <img src="images/green-logo.webp" alt="Logo">
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Login</a></li>
+            <li><a href="signup.html">Register</a></li>
+        </ul>
+
+        <div class="menu-toggle" onclick="toggleNav()">☰</div>
+
+    </nav>
+</header>
+
+<div class="auth-container">
+
+    <div class="signup-container">
+
+        <div class="fashion-info-card">
+
+            <h1>🌾 Grow Your Farming Business</h1>
+
+            <p>
+                Join our agriculture platform to manage crops,
+                connect with markets, and increase productivity.
+            </p>
+
+            <div class="info-item">
+                <h3>🌱 Crop Tracking</h3>
+                <p>Monitor crops efficiently.</p>
+            </div>
+
+            <div class="info-item">
+                <h3>🚜 Smart Farming</h3>
+                <p>Improve farm performance.</p>
+            </div>
+
+            <div class="info-item">
+                <h3>📊 Market Insights</h3>
+                <p>Stay updated with market prices.</p>
+            </div>
+
+            <div class="info-item">
+                <h3>🚚 Easy Distribution</h3>
+                <p>Deliver products faster.</p>
+            </div>
+
+        </div>
+
+        <div class="auth-card">
+
+            <h2>Create Account</h2>
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter Full Name"
+                oninput="this.value=this.value.replace(/[^a-zA-Z ]/g,'')"
+            >
+
+            <input
+                type="email"
+                id="signupEmail"
+                placeholder="Email Address"
+            >
+
+            <p id="emailError" class="error-msg"></p>
+
+            <div class="password-box">
+
+                <input
+                    type="password"
+                    id="signupPassword"
+                    placeholder="Enter Password"
+                >
+
+                <i class="fa-solid fa-eye toggle-icon"
+                   onclick="togglePassword('signupPassword', this)">
+                </i>
+
+            </div>
+
+            <p id="passwordError" class="error-msg"></p>
+
+            <div class="password-box">
+
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    placeholder="Confirm Password"
+                >
+
+                <i class="fa-solid fa-eye toggle-icon"
+                   onclick="togglePassword('confirmPassword', this)">
+                </i>
+
+            </div>
+
+            <p id="confirmPasswordError" class="error-msg"></p>
+
+            <select id="signupRole">
+                <option value="farmer">Farmer</option>
+                <option value="admin">Admin</option>
+            </select>
+
+            <button class="register-btn" onclick="registerUser()">
+                Create Account
+            </button>
+
+            <p>
+                Already have an account?
+                <a href="index.html">Login</a>
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

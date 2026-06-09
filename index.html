@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agriculture Login</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+
+        <div class="logo">
+            <img src="images/green-logo.webp" alt="Logo">
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Login</a></li>
+            <li><a href="signup.html">Register</a></li>
+        </ul>
+
+        <div class="menu-toggle" onclick="toggleNav()">☰</div>
+
+    </nav>
+</header>
+
+<div class="auth-container">
+
+    <div class="auth-card">
+
+     <div class="login-header">
+
+    <img src="images/green-logo.webp" alt="Logo">
+
+    <h2>Welcome Back</h2>
+
+    <p>Login to your agriculture account</p>
+
+</div>
+
+
+        <select id="loginRole">
+            <option value="">Select Role</option>
+            <option value="farmer">Farmer</option>
+            <option value="admin">Admin</option>
+        </select>
+
+        <p id="roleError" class="error-msg"></p>
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Enter Email"
+        >
+
+        <p id="emailError" class="error-msg"></p>
+
+        <div class="password-box">
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter Password"
+            >
+
+            <i class="fa-solid fa-eye toggle-icon"
+               onclick="togglePassword('password', this)">
+            </i>
+
+        </div>
+
+        <p id="passwordError" class="error-msg"></p>
+
+        <button class="login-btn" onclick="loginUser()">
+            Login To Dashboard
+        </button>
+
+        <p>
+            Don't have an account?
+            <a href="signup.html">Register</a>
+        </p>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
