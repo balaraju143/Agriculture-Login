@@ -140,7 +140,29 @@ ul.nav-links li{
     padding:40px;
     border-radius:20px;
     box-shadow:0 10px 30px rgba(0,0,0,.15);
+    
 }
+
+
+@media(max-width:768px){
+
+  
+    .auth-card{
+        width:100%;
+        max-width:100%;
+        padding:25px 20px;
+        overflow: visible;
+    }
+
+    #loginRole{
+        width:100%;
+        max-width:100%;  
+        box-sizing:border-box;
+        
+    }
+
+}
+
 
 .auth-card h2{
     text-align:center;
@@ -526,14 +548,15 @@ button:hover{
     }
 }
 
-
 #loginRole{
     width:100%;
+    max-width:100%;
     padding:14px;
     margin-bottom:15px;
     border:1px solid #ddd;
     border-radius:10px;
     font-size:15px;
+    box-sizing:border-box;
 }
 
 .auth-card p{
@@ -634,4 +657,60 @@ h2{
 
 .forgot-link a:hover{
     text-decoration:underline;
+}
+
+
+
+
+
+.custom-select{
+    position:relative;
+    margin-bottom:15px;
+}
+
+.select-box{
+    width:100%;
+    padding:14px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    background:#fff;
+    cursor:pointer;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.select-box i{
+    color:#2e7d32;
+}
+
+.select-options{
+    display:none;
+
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+
+    background:#fff;
+    border:1px solid #ddd;
+    border-radius:10px;
+
+    margin-top:5px;
+
+    overflow:hidden;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+    z-index:999;
+}
+
+.select-options div{
+    padding:14px;
+    cursor:pointer;
+}
+
+.select-options div:hover{
+    background:#f1f8e9;
 }

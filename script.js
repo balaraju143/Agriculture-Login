@@ -35,7 +35,7 @@ function togglePassword(inputId, icon) {
 //login
 function loginUser() {
 
-    const role = document.getElementById("loginRole").value;
+    const role =document.getElementById("loginRole").value;
     const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value.trim();
 
@@ -263,4 +263,80 @@ function logoutUser() {
     localStorage.clear();
 
     window.location.href = "index.html";
+}
+
+
+
+
+function toggleRoleDropdown(){
+
+    const options =
+    document.getElementById("roleOptions");
+
+    options.style.display =
+    options.style.display === "block"
+    ? "none"
+    : "block";
+}
+
+function selectRole(role){
+
+    document.getElementById("selectedRole")
+    .innerHTML =
+    role.charAt(0).toUpperCase() +
+    role.slice(1);
+
+    document.getElementById("loginRole")
+    .value = role;
+
+    document.getElementById("roleOptions")
+    .style.display = "none";
+}
+
+
+window.onclick = function(e){
+
+    if(!e.target.closest(".custom-select")){
+
+        const loginOptions =
+        document.getElementById("roleOptions");
+
+        const signupOptions =
+        document.getElementById("signupRoleOptions");
+
+        if(loginOptions){
+            loginOptions.style.display = "none";
+        }
+
+        if(signupOptions){
+            signupOptions.style.display = "none";
+        }
+    }
+};
+
+
+
+function toggleSignupRoleDropdown(){
+
+    const options =
+    document.getElementById("signupRoleOptions");
+
+    options.style.display =
+    options.style.display === "block"
+    ? "none"
+    : "block";
+}
+
+function selectSignupRole(role){
+
+    document.getElementById("selectedSignupRole")
+    .innerHTML =
+    role.charAt(0).toUpperCase() +
+    role.slice(1);
+
+    document.getElementById("signupRole")
+    .value = role;
+
+    document.getElementById("signupRoleOptions")
+    .style.display = "none";
 }

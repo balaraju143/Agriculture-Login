@@ -114,10 +114,30 @@
 
             <p id="confirmPasswordError" class="error-msg"></p>
 
-            <select id="signupRole">
-                <option value="farmer">Farmer</option>
-                <option value="admin">Admin</option>
-            </select>
+        <div class="custom-select">
+
+    <div class="select-box" onclick="toggleSignupRoleDropdown()">
+        <span id="selectedSignupRole">Select Role</span>
+        <i class="fa-solid fa-chevron-down"></i>
+    </div>
+
+    <div class="select-options" id="signupRoleOptions">
+
+        <div onclick="selectSignupRole('farmer')">
+            Farmer
+        </div>
+
+        <div onclick="selectSignupRole('admin')">
+            Admin
+        </div>
+
+    </div>
+
+</div>
+
+<input type="hidden" id="signupRole">
+
+
 
             <button class="register-btn" onclick="registerUser()">
                 Create Account

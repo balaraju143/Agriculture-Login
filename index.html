@@ -42,12 +42,33 @@
 
 </div>
 
+<div class="custom-select">
 
-        <select id="loginRole">
-            <option value="">Select Role</option>
-            <option value="farmer">Farmer</option>
-            <option value="admin">Admin</option>
-        </select>
+    <div class="select-box" onclick="toggleRoleDropdown()">
+        <span id="selectedRole">Select Role</span>
+        <i class="fa-solid fa-chevron-down"></i>
+    </div>
+
+    <div class="select-options" id="roleOptions">
+
+        <div onclick="selectRole('farmer')">
+            Farmer
+        </div>
+
+        <div onclick="selectRole('admin')">
+            Admin
+        </div>
+
+    </div>
+
+</div>
+
+<input type="hidden" id="loginRole">
+
+
+
+
+
 
         <p id="roleError" class="error-msg"></p>
 
