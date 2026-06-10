@@ -714,3 +714,43 @@ h2{
 .select-options div:hover{
     background:#f1f8e9;
 }
+
+
+.welcome h2{
+    color:#2e7d32;
+    margin:0;
+
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+
+    font-size:28px;
+}
+
+@media(max-width:768px){
+
+    .welcome{
+        padding:15px;
+    }
+
+    .welcome h2{
+        font-size:20px;
+        line-height:1.4;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .cards{
+        display:grid;
+        grid-template-columns:1fr;
+        gap:15px;
+    }
+
+    .card{
+        width:100%;
+        padding:20px;
+    }
+
+}
